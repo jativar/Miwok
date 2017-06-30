@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,47 +32,69 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        NumbersClickListener clickListener = new NumbersClickListener();
         // Find the View that shows the numbers category
-        TextView numbers = (TextView)findViewById(R.id.numbers);
+        TextView numbers = (TextView) findViewById(R.id.numbers);
         // Set a clickListener on that View
-        numbers.setOnClickListener(clickListener);
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // I can display a Toast message or
+                // Create a new intent to open the {@link NumbersActivity}
+                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                // Start the new activity
+                startActivity(numbersIntent);
+            }
+        });
+
+        // Find the View that shows the family category
+        TextView family = (TextView) findViewById(R.id.family);
+        // Set a clickListener on that View
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // I can display a Toast message or
+                // Create a new intent to open the {@link FamilyActivity}
+                Toast.makeText(view.getContext(), "Open the list of family", Toast.LENGTH_SHORT).show();
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                // Start the new activity
+                startActivity(familyIntent);
+            }
+        });
+
+
+        // Find the View that shows the colors category
+        TextView colors = (TextView) findViewById(R.id.colors);
+        // Set a clickListener on that View
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // I can display a Toast message or
+                // Create a new intent to open the {@link ColorsActivity}
+                Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_SHORT).show();
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                // Start the new activity
+                startActivity(colorsIntent);
+            }
+        });
+
+        // Find the View that shows the phrases category
+        TextView phrases = (TextView) findViewById(R.id.phrases);
+        // Set a clickListener on that View
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // I can display a Toast message or
+                // Create a new intent to open the {@link PhrasesActivity}
+                Toast.makeText(view.getContext(), "Open the list of phrases", Toast.LENGTH_SHORT).show();
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                // Start the new activity
+                startActivity(phrasesIntent);
+            }
+        });
+
     }
 
-
-
-/***
- *
- * This methos is onli valid if we use the onClick="openNumbersList() method
-    public void openNumbersList(View view) {
-        // TODO: Write your code here
-        // Here we use an EXPLICIT INTENT
-        Intent i = new Intent(this, NumbersActivity.class);
-        startActivity(i);
-    }
-
- */
-
-    public void openFamilyMembers(View view) {
-        // TODO: Write your code here
-        // Here we use an EXPLICIT INTENT
-        Intent i = new Intent(this, FamilyActivity.class);
-        startActivity(i);
-    }
-
-
-    public void openColors(View view) {
-        // TODO: Write your code here
-        // Here we use an EXPLICIT INTENT
-        Intent i = new Intent(this, ColorsActivity.class);
-        startActivity(i);
-    }
-
-
-    public void openPhrases(View view) {
-        // TODO: Write your code here
-        // Here we use an EXPLICIT INTENT
-        Intent i = new Intent(this, PhrasesActivity.class);
-        startActivity(i);
-    }
 }
+
+
