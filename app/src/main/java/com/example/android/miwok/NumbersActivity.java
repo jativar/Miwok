@@ -34,22 +34,24 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
 
-        int index = 0;
+        // Create a variable index to keep track of the current index position
         int maxElementsInWords = 0;
 
         maxElementsInWords = words.size();
 
-        while ( index < maxElementsInWords) {
 
+
+        //TODO: For loop implementation
+        for (int index = 0; index < maxElementsInWords; index++){
+            // Create a new {@link TextView} that displayed the word at
+            // and add the View as a child to the rootView
             TextView wordView = new TextView(this);
             wordView.setText(words.get(index));
             rootView.addView(wordView);
 
-            Log.v("NumbersActivity", "Index: " + index + "Value: " + words.get(index));
+            Log.v("NumbersActivity", "Index: " + index + " Value: " + words.get(index));
 
-            index++;
         }
-
 
     }
 }
