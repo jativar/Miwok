@@ -3,8 +3,12 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import static android.R.attr.max;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -13,45 +17,38 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        //TODO: Add words here
-        //Create an array of words
-        String[] words = {"one", "two", "three", "four", "five",
-                            "six", "seven", "eight", "nine", "ten"};
-        Log.v("NumbersActivity", "Word at index 0: " + words[0]);
-        Log.v("NumbersActivity", "Word at index 1: " + words[1]);
-        Log.v("NumbersActivity", "Word at index 2: " + words[2]);
-        Log.v("NumbersActivity", "Word at index 3: " + words[3]);
-        Log.v("NumbersActivity", "Word at index 4: " + words[4]);
-        Log.v("NumbersActivity", "Word at index 5: " + words[5]);
-        Log.v("NumbersActivity", "Word at index 6: " + words[6]);
-        Log.v("NumbersActivity", "Word at index 7: " + words[7]);
-        Log.v("NumbersActivity", "Word at index 8: " + words[8]);
-        Log.v("NumbersActivity", "Word at index 9: " + words[9]);
+        //TODO: Create an ArrayList words
+        ArrayList<String> words = new ArrayList<String>();
 
+        //TODO: Add elements in the ArrayList words
+        words.add("one");
+        words.add("two");
+        words.add("three");
+        words.add("four");
+        words.add("five");
+        words.add("six");
+        words.add("seven");
+        words.add("eight");
+        words.add("nine");
+        words.add("ten");
 
-        //TODO: Create an ArrayList musicLibrary
-        ArrayList<String> musicLibrary = new ArrayList<String>();
+        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
 
-        //TODO: Add elements in an ArrayList
-        musicLibrary.add("Yellow Submarine");
-        musicLibrary.add("Thriller");
+        int index = 0;
+        int maxElementsInWords = 0;
 
-        //TODO: Adds an element at a specific index
-        musicLibrary.add(0,"Blue Suede Shoes");
+        maxElementsInWords = words.size();
 
-        //TODO: Access elements in an ArrayList
-        Log.v("NumberActivity", "access to element with index 0: " + musicLibrary.get(0));
-        Log.v("NumberActivity", "access to element with index 1: " + musicLibrary.get(1));
-        Log.v("NumberActivity", "access to element with index 2: " + musicLibrary.get(2));
+        while ( index < maxElementsInWords) {
 
-        //TODO: Remove elememnts from an ArrayList
-        musicLibrary.remove(2);
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(index));
+            rootView.addView(wordView);
 
-        //TODO: Get the ArrayList length or size
-        int l;
+            Log.v("NumbersActivity", "Index: " + index + "Value: " + words.get(index));
 
-        l = musicLibrary.size();
-        Log.v("NumberActivity", "ArrayList length is: " + l);
+            index++;
+        }
 
 
     }
