@@ -27,4 +27,8 @@
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+
+
+    <!-- Category name for the vocabulary words for hide and seek [CHAR LIMIT=20] -->
+    <string name="category_hide_and_seek">Hide and Seek</string>
 </resources>

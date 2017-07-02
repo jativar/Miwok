@@ -93,6 +93,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        // Find the View that shows the hide and seek category
+        TextView hide_and_seek = (TextView) findViewById(R.id.hide_and_seek);
+        // Set a clickListener on that View
+        hide_and_seek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // I can display a Toast message or
+                // Create a new intent to open the {@link PhrasesActivity}
+                Toast.makeText(view.getContext(), "Open the list of hide and seek", Toast.LENGTH_SHORT).show();
+                Intent hide_and_seekIntent = new Intent(MainActivity.this, HideAndSeekActivity.class);
+                // Start the new activity
+                startActivity(hide_and_seekIntent);
+            }
+        });
     }
 
 }

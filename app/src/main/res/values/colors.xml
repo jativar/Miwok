@@ -34,4 +34,7 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Background color for the hide and seek category -->
+    <color name="category_hide_and_seek">#FD8E09</color>
 </resources>

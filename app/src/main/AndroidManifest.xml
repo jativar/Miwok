@@ -37,7 +37,9 @@
         <activity android:name=".FamilyActivity"
             android:label="@string/category_family"/>
         <activity android:name=".ColorsActivity"
-            android:label="@string/category_colors"></activity>
+            android:label="@string/category_colors"/>
+        <activity android:name=".HideAndSeekActivity"
+            android:label="@string/category_hide_and_seek"/>
     </application>
 
 </manifest>

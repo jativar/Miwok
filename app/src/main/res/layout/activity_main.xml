@@ -50,4 +50,11 @@
         android:text="@string/category_phrases"
         />
 
+    <TextView
+        android:id="@+id/hide_and_seek"
+        style="@style/CategoryStyle"
+        android:background="@color/category_hide_and_seek"
+        android:text="@string/category_hide_and_seek"
+        />
+
 </LinearLayout>
