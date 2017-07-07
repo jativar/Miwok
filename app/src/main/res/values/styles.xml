@@ -11,6 +11,8 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
+
+     Theme of the app
 -->
 <resources>
 
@@ -21,6 +23,7 @@
     </style>
 
     <!-- Style for a category of vocabulary words -->
+    <!-- How a category looks -->
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/list_item_height</item>
