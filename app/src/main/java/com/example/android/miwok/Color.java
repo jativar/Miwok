@@ -13,10 +13,14 @@ public class Color {
     /** Miwok translation for the color */
     private String mMiwokTranslation;
 
+    /** Miwok Drawable resource ID */
+    private int mImageResourceId;
+
     /** Add the constructor */
-    public Color(String defaultTranslation, String miwokTranslation){
+    public Color(String defaultTranslation, String miwokTranslation, int imageResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
     }
 
     /**
@@ -32,4 +36,10 @@ public class Color {
     public String getmMiwokTranslation(){
         return mMiwokTranslation;
     }
+
+    /**
+     * Get the image resource ID
+     */
+    public int getmImageResourceId() { return mImageResourceId; }
+    
 }

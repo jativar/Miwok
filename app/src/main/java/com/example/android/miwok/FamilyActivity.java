@@ -24,16 +24,16 @@ public class FamilyActivity extends AppCompatActivity {
 
         //TODO: Add elements in the ArrayList family
         //words.add("one");
-        family.add(new Family("father","әpә"));
-        family.add(new Family("mother","әta"));
-        family.add(new Family("son","angsi"));
-        family.add(new Family("daughter","tune"));
-        family.add(new Family("older brother","taachi"));
-        family.add(new Family("younger brother","chalitti"));
-        family.add(new Family("older sister","tete"));
-        family.add(new Family("younger sister","kolliti"));
-        family.add(new Family("grandmother","ama"));
-        family.add(new Family("grandfather","paapa"));
+        family.add(new Family("father","әpә", R.drawable.family_father));
+        family.add(new Family("mother","әta", R.drawable.family_mother));
+        family.add(new Family("son","angsi", R.drawable.family_son));
+        family.add(new Family("daughter","tune", R.drawable.family_daughter));
+        family.add(new Family("older brother","taachi", R.drawable.family_older_brother));
+        family.add(new Family("younger brother","chalitti", R.drawable.family_younger_brother));
+        family.add(new Family("older sister","tete", R.drawable.family_older_sister));
+        family.add(new Family("younger sister","kolliti", R.drawable.family_younger_sister));
+        family.add(new Family("grandmother","ama", R.drawable.family_grandmother));
+        family.add(new Family("grandfather","paapa", R.drawable.family_grandfather));
 
         //TODO: WHEN TO CREATE A CUSTOM CLASS?
         /* Create the Word class for the Miwok app, so we can show a list

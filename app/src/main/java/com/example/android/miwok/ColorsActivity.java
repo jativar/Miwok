@@ -22,14 +22,14 @@ public class ColorsActivity extends AppCompatActivity {
 
         //TODO: Add elements in the ArrayList colors
         //words.add("one");
-        colors.add(new Color("red","wetetti"));
-        colors.add(new Color("green","chokokki"));
-        colors.add(new Color("brown","takaakki"));
-        colors.add(new Color("gray","topoppi"));
-        colors.add(new Color("black","kululli"));
-        colors.add(new Color("white","kelelli"));
-        colors.add(new Color("dusty yellow","topiisә "));
-        colors.add(new Color("mustard yellow","chiwiitә"));
+        colors.add(new Color("red","wetetti", R.drawable.color_red));
+        colors.add(new Color("green","chokokki", R.drawable.color_green));
+        colors.add(new Color("brown","takaakki", R.drawable.color_brown));
+        colors.add(new Color("gray","topoppi", R. drawable.color_gray));
+        colors.add(new Color("black","kululli", R. drawable.color_black));
+        colors.add(new Color("white","kelelli", R.drawable.color_white));
+        colors.add(new Color("dusty yellow","topiisә ", R.drawable.color_dusty_yellow));
+        colors.add(new Color("mustard yellow","chiwiitә", R.drawable.color_mustard_yellow));
 
         //TODO: WHEN TO CREATE A CUSTOM CLASS?
         /* Create the Word class for the Miwok app, so we can show a list
