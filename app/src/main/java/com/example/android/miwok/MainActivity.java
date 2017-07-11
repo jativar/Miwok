@@ -15,7 +15,6 @@
  */
 package com.example.android.miwok;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // I can display a Toast message or
                 // Create a new intent to open the {@link NumbersActivity}
-                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), "Open the list of NUMBERS", Toast.LENGTH_SHORT).show();
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
                 // Start the new activity
                 startActivity(numbersIntent);
@@ -75,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
                 // Start the new activity
                 startActivity(colorsIntent);
+
             }
         });
 
