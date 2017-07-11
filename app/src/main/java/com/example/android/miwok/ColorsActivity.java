@@ -15,14 +15,14 @@ public class ColorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colors);
+        setContentView(R.layout.activity_colors); // Make a reference to the file activity_colors.xml under the folder layout
 
         //TODO: Create an ArrayList colors
         ArrayList<Color> colors = new ArrayList<Color>();
 
         //TODO: Add elements in the ArrayList colors
         //words.add("one");
-        colors.add(new Color("red","wetetti", R.drawable.color_red));
+        colors.add(new Color("RED","wetetti", R.drawable.color_red));
         colors.add(new Color("green","chokokki", R.drawable.color_green));
         colors.add(new Color("brown","takaakki", R.drawable.color_brown));
         colors.add(new Color("gray","topoppi", R. drawable.color_gray));
@@ -52,8 +52,8 @@ public class ColorsActivity extends AppCompatActivity {
 
         //Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         //There should be a {@link ListView} with the view ID called list, which is declared in the
-        //activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        //activity_colors.xml layout file.
+        ListView listView = (ListView) findViewById(R.id.category_colors);  // Make reference to the tag android:id="@+id/category_colors" defined into the file activity_colors.xml
 
         //Make the {@link ListView} use the {@Link ArrayAdapter} we created above, so that the
         //{@link List View} will display list items for each word in the list of words.

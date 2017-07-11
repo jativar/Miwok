@@ -24,7 +24,7 @@ public class ColorAdapter extends ArrayAdapter<Color> {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+              listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_colors,parent,false); // "R.layout.list_colors" makes a reference to the file "list_colors.xml" under the layout folder
         }
 
         Color currentColor = getItem(position);

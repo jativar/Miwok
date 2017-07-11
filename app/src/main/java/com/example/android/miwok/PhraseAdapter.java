@@ -26,7 +26,8 @@ public class PhraseAdapter extends ArrayAdapter<Phrase> {
         View listItemView = convertView;
         if (listItemView == null) {
             //listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.phrases_item,parent,false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_phrases,parent,false); // "R.layout.list_phrases" makes a reference to the file "list_phrases.xml" under the layout folder
+
         }
 
         Phrase currentPhrase = getItem(position);

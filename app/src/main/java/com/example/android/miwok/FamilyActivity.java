@@ -17,14 +17,14 @@ public class FamilyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family);
+        setContentView(R.layout.activity_family); // Make a reference to the file activity_family.xml under the folder layout
 
         //TODO: Create an ArrayList colors
         ArrayList<Family> family = new ArrayList<Family>();
 
         //TODO: Add elements in the ArrayList family
         //words.add("one");
-        family.add(new Family("father","әpә", R.drawable.family_father));
+        family.add(new Family("FATHER","әpә", R.drawable.family_father));
         family.add(new Family("mother","әta", R.drawable.family_mother));
         family.add(new Family("son","angsi", R.drawable.family_son));
         family.add(new Family("daughter","tune", R.drawable.family_daughter));
@@ -57,7 +57,7 @@ public class FamilyActivity extends AppCompatActivity {
         //Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         //There should be a {@link ListView} with the view ID called list, which is declared in the
         //activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.category_family); // Make reference to the tag android:id="@+id/category_family" defined into the file activity_family.xml
 
         //Make the {@link ListView} use the {@Link ArrayAdapter} we created above, so that the
         //{@link List View} will display list items for each word in the list of words.

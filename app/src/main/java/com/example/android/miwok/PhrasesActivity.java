@@ -17,7 +17,7 @@ public class PhrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
+        setContentView(R.layout.activity_phrases); // Make a reference to the file activity_phrases.xml under the folder layout
 
         //TODO: Create an ArrayList phrases
         ArrayList<Phrase> phrases = new ArrayList<Phrase>();
@@ -57,7 +57,7 @@ public class PhrasesActivity extends AppCompatActivity {
         //Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         //There should be a {@link ListView} with the view ID called list, which is declared in the
         //activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.category_phrases); // Make reference to the tag android:id="@+id/category_phrases" defined into the file activity_colors.xml
 
         //Make the {@link ListView} use the {@Link ArrayAdapter} we created above, so that the
         //{@link List View} will display list items for each word in the list of words.

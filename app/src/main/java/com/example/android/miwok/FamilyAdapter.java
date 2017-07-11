@@ -26,7 +26,8 @@ public class FamilyAdapter extends ArrayAdapter<Family> {
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_family,parent,false); // "R.layout.list_family" makes a reference to the file "list_family.xml" under the layout folder
+
         }
 
         Family currentFamily = getItem(position);
