@@ -18,7 +18,9 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,10 +56,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // I can display a Toast message or
                 // Create a new intent to open the {@link FamilyActivity}
-                Toast.makeText(view.getContext(), "Open the list of family", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(view.getContext(), "Open the list of family", Toast.LENGTH_SHORT).show();
+
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.custom_toast_family,
+                        (ViewGroup) findViewById(R.id.custom_toast_container));
+                TextView text = (TextView) layout.findViewById(R.id.text);
+                text.setText("Family Category");
+
+                Toast toast = new Toast(getApplicationContext());
+                toast.setDuration(Toast.LENGTH_SHORT);
+                toast.setView(layout);
+                toast.show();
+
+
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
                 // Start the new activity
                 startActivity(familyIntent);
+
+
             }
         });
 
